@@ -1,3 +1,4 @@
+
 body{
     background-color: rgb(16, 16, 16);
     font-family: 'Permanent Marker', cursive;
@@ -19,6 +20,7 @@ h2{
     flex-direction: row;
     padding: 50px;
     justify-content: space-around;
+    align-items: center;
 
 }
 #scissors,#paper,#rock{
@@ -30,14 +32,54 @@ h2{
     border-style: solid;
     padding: 20px;
     transform: scale(1.5);
+    border-width: 3px;
 }
 #rock:hover{
     border-style: solid;
     padding: 20px;
     transform: scale(1.5);
+    border-width: 3px;
 }
 #scissors:hover{
     border-style: solid;
     padding: 20px;
     transform: scale(1.5);
+    border-width: 3px;
+}
+#paper{
+    margin-left: 300px;
+}
+#rock{
+    margin-right: 300px;
+}
+#scores{
+    display: flex;
+    justify-content: center;
+    
+}
+#ComputerScoreSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 200px;
+
+}
+.userAndComp{
+    font-size: 35px;
+}
+#userScore{
+    font-size: 35px;
+}
+
+#CompScore{
+    font-size: 35px;
+    align-self: center;
+}
+#userScoreSection{
+    display: flex;
+}
+#verdict{
+    display: block;
+    text-align: center;
+    font-size: 35px;
 }
