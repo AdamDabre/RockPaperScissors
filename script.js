@@ -15,31 +15,67 @@ function getComputerChoice() {
     }
     return computersChoice;
 }
-function playRound(computerSelection, playerSelection) {
+
+function playRound(computerSelection, playerSelection, scores) {
+    let usersScore = document.querySelector("#userScore");
+    usersScore.innerHTML = scores[0];
+
+    let CompScore = document.querySelector("#CompScore");
+    CompScore.innerHTML = scores[1];
     if (computerSelection.toLowerCase() === playerSelection.toLowerCase()) {
-        return "It was a draw you both selected " + computerSelection;
+        let congrats = document.querySelector("#congrats");
+        congrats.innerHTML = "Draw!";
+        return scores;
     } else if (playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "scissors") {
-        return "You Won! rock beats scissors";
+        scores[0]++;
+        console.log(scores[0], scores[1]);
+        return scores;
     } else if (playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "paper") {
-        return "You Won! Scissors beats Paper";
+        scores[0]++;
+        console.log(scores[0], scores[1]);
+        return scores;
     }
     else if (playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "rock") {
-        return "You Won! Paper beats rock";
+        scores[0]++;
+        console.log(scores[0], scores[1]);
+        return scores;
     }
     else {
-        return "you loose";
+        scores[1]++;
+        console.log(scores[0], scores[1]);
+        return scores;
     }
 }
-let computerSelection = getComputerChoice();
-let playerSelection = "";
 
+let scores = [0, 0];
 
-/*function game(computerSelection, playerSelection) {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = window.prompt("Select either Rock, Paper, Scissors");
-        let computerSelection = getComputerChoice();
-        console.log(playRound(computerSelection, playerSelection));
-        console.log("\n")
+let rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    let computerSelection = getComputerChoice();
+    scores = playRound(computerSelection, "rock", scores);
+    if (scores[0] > 6 || scores[1] > 6) {
+        scores[0] = 0;
+        scores[1] = 0;
+
     }
-}*/
-game(computerSelection, playerSelection);
+    if (scores[0] == 6) {
+        let congrats = document.querySelector("#congrats");
+        congrats.innerHTML = "Congratulations, you WON!";
+        return;
+    } else if (scores[1] == 6) {
+        let congrats = document.querySelector("#congrats");
+        congrats.innerHTML = "You lose ";
+        return;
+    }
+});
+let paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    let computerSelection = getComputerChoice();
+    playRound(computerSelection, "paper", scores);
+});
+
+let scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    let computerSelection = getComputerChoice();
+    playRound(computerSelection, "scissors", scores);
+});

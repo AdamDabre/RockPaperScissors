@@ -31,26 +31,26 @@ h2{
 #paper:hover{
     border-style: solid;
     padding: 20px;
-    transform: scale(1.5);
+    transform: scale(1.3);
     border-width: 3px;
 }
 #rock:hover{
     border-style: solid;
     padding: 20px;
-    transform: scale(1.5);
+    transform: scale(1.3);
     border-width: 3px;
 }
 #scissors:hover{
     border-style: solid;
     padding: 20px;
-    transform: scale(1.5);
+    transform: scale(1.3);
     border-width: 3px;
 }
 #paper{
-    margin-left: 300px;
+    margin-left: 350px;
 }
 #rock{
-    margin-right: 300px;
+    margin-right: 350px;
 }
 #scores{
     display: flex;
@@ -79,6 +79,12 @@ h2{
     display: flex;
 }
 #verdict{
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    margin: 80px;
+}
+#congrats{
     display: block;
     text-align: center;
     font-size: 35px;
