@@ -84,7 +84,7 @@ h2{
     font-size: 35px;
     margin: 80px;
 }
-#congrats{
+#congrats,#outcome{
     display: block;
     text-align: center;
     font-size: 35px;
