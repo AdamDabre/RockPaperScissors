@@ -34,12 +34,12 @@ let computerSelection = getComputerChoice();
 let playerSelection = "";
 
 
-function game(computerSelection, playerSelection) {
+/*function game(computerSelection, playerSelection) {
     for (let i = 0; i < 5; i++) {
         let playerSelection = window.prompt("Select either Rock, Paper, Scissors");
         let computerSelection = getComputerChoice();
         console.log(playRound(computerSelection, playerSelection));
         console.log("\n")
     }
-}
+}*/
 game(computerSelection, playerSelection);

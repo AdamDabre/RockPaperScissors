@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(16, 16, 16);
+    font-family: 'Permanent Marker', cursive;
+    color: aliceblue;
+}
+h1{
+    display: block;
+    text-align: center;
+    font-size: 45px;
+}
+h2{
+    display: block;
+    text-align: center;
+    font-size: 45px;
+}
+
+#buttonsDiv{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-around;
+
+}
+#scissors,#paper,#rock{
+    border-style: solid;
+    padding: 20px;
+    transition: all .2s ease-in-out; 
+}
+#paper:hover{
+    border-style: solid;
+    padding: 20px;
+    transform: scale(1.5);
+}
+#rock:hover{
+    border-style: solid;
+    padding: 20px;
+    transform: scale(1.5);
+}
+#scissors:hover{
+    border-style: solid;
+    padding: 20px;
+    transform: scale(1.5);
+}
